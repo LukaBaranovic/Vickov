@@ -1,6 +1,8 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop"; // <--- 1. NOVI IMPORT
+import ScrollToTop from "../components/ScrollToTop";
+import ContactModal from "../components/ContactModal"; // <--- NOVI IMPORT
+import { ModalProvider } from "../context/ModalContext"; // <--- NOVI IMPORT
 import "./globals.css";
 
 export const metadata = {
@@ -12,11 +14,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="hr" className="scroll-smooth">
       <body className="bg-gray-50 flex flex-col min-h-screen">
-        <ScrollToTop />{" "}
-        {/* <--- 2. UBACI OVDJE (nevidljiva je, ali radi posao) */}
-        <Navbar />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+        <ModalProvider>
+          {" "}
+          {/* <--- OMATAMO SVE U PROVIDER */}
+          <ScrollToTop />
+          <Navbar />
+          <ContactModal />{" "}
+          {/* <--- OVDJE STOJI POPUP (nevidljiv dok se ne pozove) */}
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </ModalProvider>
       </body>
     </html>
   );
