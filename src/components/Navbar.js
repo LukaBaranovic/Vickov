@@ -1,22 +1,33 @@
-"use client"; // OVO JE BITNO JER KORISTIMO STATE
+"use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react"; // Dodao useEffect
 import Link from "next/link";
 import { contactConfig } from "../data/config";
 
 export default function Navbar() {
-  // Stanje: je li mobilni meni otvoren ili zatvoren?
   const [isOpen, setIsOpen] = useState(false);
 
-  // Funkcija za zatvaranje menija kad se klikne na link
+  // Funkcija koja sprječava skrolanje pozadine kad je meni otvoren
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200 shadow-sm">
+    // Z-50 osigurava da je Navbar UVIJEK na vrhu svega
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-100">
       <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center relative z-50 bg-white">
           {/* LOGO */}
-          <div className="text-2xl font-bold text-blue-900 tracking-tight z-50">
+          <div className="text-2xl font-bold text-blue-900 tracking-tight">
             <Link href="/" onClick={closeMenu}>
               DALMACIJA<span className="text-blue-500">NAJAM</span>
             </Link>
@@ -64,11 +75,12 @@ export default function Navbar() {
 
           {/* MOBILNI HAMBURGER GUMB */}
           <button
-            className="md:hidden text-gray-800 z-50 p-2"
+            className="md:hidden text-gray-800 p-2 focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle menu"
           >
             {isOpen ? (
-              // X ikona kad je otvoreno
+              // X ikona
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-8 w-8"
@@ -84,7 +96,7 @@ export default function Navbar() {
                 />
               </svg>
             ) : (
-              // Hamburger ikona kad je zatvoreno
+              // Hamburger ikona
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-8 w-8"
@@ -104,11 +116,15 @@ export default function Navbar() {
         </div>
 
         {/* --- MOBILNI IZBORNIK (FULL SCREEN) --- */}
-        {/* Prikazuje se samo kad je isOpen === true */}
         <div
-          className={`fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out md:hidden flex flex-col justify-center items-center space-y-8 ${
-            isOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`
+            fixed inset-0 z-40 bg-white flex flex-col justify-center items-center space-y-8
+            transform transition-transform duration-300 ease-in-out h-screen w-screen
+            ${isOpen ? "translate-x-0" : "translate-x-full"}
+          `}
+          // Dodali smo 'top-0' da krene od vrha, ali z-40 je ispod z-50 (logo trake),
+          // pa će izgledati kao da izlazi ispod loga.
+          // Budući da je bg-white, prekrit će sadržaj stranice.
         >
           <a
             href="#"
@@ -154,7 +170,7 @@ export default function Navbar() {
             onClick={closeMenu}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-green-500 text-white px-8 py-3 rounded-full font-bold text-lg shadow-lg flex items-center gap-2 mt-4"
+            className="bg-green-500 text-white px-8 py-3 rounded-full font-bold text-lg shadow-lg flex items-center gap-2 mt-8"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
