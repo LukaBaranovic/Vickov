@@ -8,7 +8,7 @@ export default function Home() {
       {/* 1. HERO SEKCIJA (Velika slika i naslov) */}
       <Hero />
 
-      {/* 2. O NAMA SEKCIJA (Ažurirani tekst s ponudom) */}
+      {/* 2. O NAMA SEKCIJA */}
       <section className="py-20 bg-white" id="o-nama">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-8">
@@ -46,6 +46,10 @@ export default function Home() {
           <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900">
             Usluga najma
           </h2>
+
+          {/* --- OVDJE JE DODANA PLAVA CRTA --- */}
+          <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded"></div>
+          {/* ----------------------------------- */}
         </div>
         <ServicesCarousel />
       </section>
