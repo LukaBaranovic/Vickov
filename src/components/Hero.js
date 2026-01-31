@@ -4,13 +4,15 @@ export default function Hero() {
   return (
     <section className="relative h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
       {/* 1. POZADINSKA SLIKA */}
+      {/* Ovdje smo napravili tri promjene:
+          1. Ažurirali smo ime slike na 'pozadinaVickov4.jpg'
+          2. Dodali smo 'bg-scroll' (za mobitele - slika se normalno miče)
+          3. Dodali smo 'md:bg-fixed' (samo na desktopu slika stoji) 
+      */}
       <div
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
         style={{
           backgroundImage: "url('/images/hero/pozadinaVickov4.jpg')",
-          backgroundPosition: "center",
-          backgroundSize: "cover",
-          backgroundAttachment: "fixed",
         }}
       ></div>
 
