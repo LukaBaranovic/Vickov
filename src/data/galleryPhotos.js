@@ -1,5 +1,5 @@
 export const galleryPhotos = [
-  // --- VJENČANJA (Najvažnije stavljamo prvo ili miješamo za dojam) ---
+  // --- VJENČANJA I SVEČANOSTI ---
   {
     src: "/images/gallery/pagoda-vjencanje-1-1.jpg",
     alt: "Vjenčanje na otvorenom s pagodama",
@@ -19,16 +19,16 @@ export const galleryPhotos = [
       "Uz našu ambijentalnu rasvjetu, pagode postaju magično mjesto za večernje proslave.",
   },
   {
-    src: "/images/gallery/pagoda-vjencanje-2-2.jpg",
-    alt: "Detalji uređenja šatora",
+    src: "/images/gallery/pagoda-vjencanje-3-1.jpg", // NOVO
+    alt: "Glamurozno vjenčanje na otvorenom",
     description:
-      "Vrhunska estetika i čistoća opreme ključni su za vaš najvažniji dan.",
+      "Vaš najvažniji dan zaslužuje najbolju opremu. Čiste, bijele i elegantne pagode za savršene fotografije.",
   },
   {
-    src: "/images/gallery/pagoda-vjencanje-2-3.jpg",
-    alt: "Pagode povezane u cjelinu",
+    src: "/images/gallery/pagoda-vjencanje-3-2.jpg", // NOVO
+    alt: "Detalji svadbenog šatora",
     description:
-      "Mogućnost spajanja više pagoda kako bi se dobio jedinstven, veliki natkriveni prostor.",
+      "Pažnja posvećena svakom detalju montaže kako bi dekoracije došle do izražaja.",
   },
   {
     src: "/images/gallery/pagoda-vjencanje-2-4.jpg",
@@ -37,7 +37,41 @@ export const galleryPhotos = [
       "Sigurna zaštita od sunca ili kiše bez narušavanja pogleda na prekrasnu prirodu.",
   },
 
-  // --- SAJMOVI I DOGAĐANJA ---
+  // --- EKSKLUZIVNE LOKACIJE (BAZENI I POSEBNI TERENI) ---
+  {
+    src: "/images/gallery/pagoda-bazen-1-1.jpg", // NOVO
+    alt: "Pagoda uz bazen",
+    description:
+      "Savršeno rješenje za ljetne zabave uz bazen – pruža ugodnu hladovinu i VIP atmosferu.",
+  },
+  {
+    src: "/images/gallery/pagoda-dubrovnik-1-1.jpg", // NOVO
+    alt: "Event u Dubrovniku",
+    description:
+      "Dostupni smo diljem Dalmacije, uključujući i ekskluzivne lokacije na jugu poput Dubrovnika.",
+  },
+
+  // --- LUKE I JAVNE POVRŠINE (URBANI EVENTI) ---
+  {
+    src: "/images/gallery/pagoda-brodska-luka-1-1.jpg", // NOVO
+    alt: "Pagode u brodskoj luci",
+    description:
+      "Naše pagode su izuzetno stabilne i sigurne, idealne za vjetrovite lokacije uz more i luke.",
+  },
+  {
+    src: "/images/gallery/pagoda-brodska-luka-1-2.jpg", // NOVO
+    alt: "Manifestacija na rivi",
+    description:
+      "Profesionalna oprema za gradske manifestacije, ribarske večeri i događanja na otvorenom.",
+  },
+  {
+    src: "/images/gallery/pagoda-trajektna-luka-1-1.jpg", // NOVO
+    alt: "Event u trajektnoj luci",
+    description:
+      "Fleksibilna montaža na betonskim i asfaltnim površinama u prometnim zonama.",
+  },
+
+  // --- SAJMOVI I IZLOŽBE ---
   {
     src: "/images/gallery/pagoda-sajam-1-1.jpg",
     alt: "Sajamske kućice i pagode",
@@ -65,10 +99,10 @@ export const galleryPhotos = [
       "Naše pagode se savršeno uklapaju u prirodni ambijent parkova i zelenih površina.",
   },
   {
-    src: "/images/gallery/pagoda-park-1-2.jpg",
-    alt: "Događanje u prirodi",
+    src: "/images/gallery/pagoda-park-2-1.jpg", // NOVO
+    alt: "Večernji event u prirodi",
     description:
-      "Fleksibilna montaža na travnatim površinama uz korištenje sigurnih podnica.",
+      "Organizirajte nezaboravne domjenke u prirodi uz sigurnu montažu na travnatim površinama.",
   },
 
   // --- SPORTSKI DOGAĐAJI (MARATON) ---
