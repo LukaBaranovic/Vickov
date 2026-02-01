@@ -17,7 +17,7 @@ export default function ContactModal() {
       ></div>
 
       {/* Prozorčić */}
-      <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 md:p-8 transform transition-all scale-100 animate-fade-in-up">
+      <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 md:p-8 transform transition-all scale-100 animate-fade-in-up overflow-y-auto max-h-[90vh]">
         {/* Gumb za zatvaranje (X) */}
         <button
           onClick={closeModal}
@@ -43,12 +43,12 @@ export default function ContactModal() {
           <h3 className="text-2xl font-bold text-gray-900 mb-2">
             Zatražite ponudu
           </h3>
-          <p className="text-gray-500 mb-8">
+          <p className="text-gray-500 mb-6">
             Odaberite način na koji nas želite kontaktirati:
           </p>
 
-          <div className="space-y-4">
-            {/* WHATSAPP OPCIJA */}
+          <div className="space-y-3">
+            {/* 1. WHATSAPP (Zeleni) */}
             <a
               href={`https://wa.me/${
                 contactConfig.phone
@@ -64,11 +64,11 @@ export default function ContactModal() {
               Pošalji WhatsApp poruku
             </a>
 
-            {/* EMAIL OPCIJA */}
+            {/* 2. EMAIL (Nova blaža plava) */}
             <a
               href={`mailto:${contactConfig.email}?subject=Upit za najam opreme`}
               onClick={closeModal}
-              className="flex items-center justify-center gap-3 w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-6 rounded-xl transition-transform hover:scale-[1.02] shadow-md"
+              className="flex items-center justify-center gap-3 w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-6 rounded-xl transition-transform hover:scale-[1.02] shadow-md"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,6 +85,29 @@ export default function ContactModal() {
                 />
               </svg>
               Pošalji Email
+            </a>
+
+            {/* 3. POZIV (Siva - neutralna) */}
+            <a
+              href={`tel:+${contactConfig.phone}`}
+              onClick={closeModal}
+              className="flex items-center justify-center gap-3 w-full bg-gray-800 hover:bg-gray-900 text-white font-bold py-4 px-6 rounded-xl transition-transform hover:scale-[1.02] shadow-md"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+                />
+              </svg>
+              Nazovite nas
             </a>
           </div>
 

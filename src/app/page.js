@@ -1,11 +1,12 @@
 import Hero from "../components/Hero";
 import ServicesCarousel from "../components/ServicesCarousel";
 import GallerySection from "../components/GallerySection";
+import Features from "../components/Features";
 
 export default function Home() {
   return (
     <>
-      {/* 1. HERO SEKCIJA (Velika slika i naslov) */}
+      {/* 1. HERO SEKCIJA */}
       <Hero />
 
       {/* 2. O NAMA SEKCIJA */}
@@ -40,21 +41,24 @@ export default function Home() {
       {/* 3. PONUDA (Vrtuljak usluga) */}
       <section className="py-12 bg-gray-50" id="ponuda">
         <div className="text-center mb-16">
-          <p className="text-yellow-600 text-lg font-serif italic mb-2">
+          {/* PROMJENA: Sada je font isti kao kod 'Naš proces rada' (Velika slova, razmaknuto) */}
+          <p className="text-yellow-600 font-bold tracking-widest uppercase text-sm mb-3 font-serif">
             Što nudimo?
           </p>
           <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900">
             Usluga najma
           </h2>
 
-          {/* --- OVDJE JE DODANA PLAVA CRTA --- */}
-          <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded"></div>
-          {/* ----------------------------------- */}
+          {/* PROMJENA: Nova, blaža plava boja (blue-500) */}
+          <div className="w-24 h-1 bg-blue-500 mx-auto mt-4 rounded"></div>
         </div>
         <ServicesCarousel />
       </section>
 
-      {/* 4. GALERIJA */}
+      {/* 4. ZNAČAJKE */}
+      <Features />
+
+      {/* 5. GALERIJA */}
       <GallerySection />
     </>
   );

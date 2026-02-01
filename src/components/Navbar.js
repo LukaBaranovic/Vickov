@@ -21,7 +21,6 @@ export default function Navbar() {
 
   const closeMenu = () => setIsOpen(false);
 
-  // FUNKCIJA ZA LOGO: Zatvori meni i vozi na vrh
   const handleLogoClick = () => {
     closeMenu();
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -36,10 +35,21 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm border-b border-gray-100">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center relative z-50 bg-white">
-          {/* LOGO SADA VODI NA VRH */}
-          <div className="text-2xl font-bold text-blue-900 tracking-tight cursor-pointer">
-            <Link href="/" onClick={handleLogoClick}>
-              DALMACIJA<span className="text-blue-500">NAJAM</span>
+          {/* LOGO */}
+          <div className="text-2xl font-bold tracking-tight cursor-pointer">
+            <Link
+              href="/"
+              onClick={handleLogoClick}
+              className="group flex items-center"
+            >
+              <span className="text-blue-900 transition-colors duration-300 group-hover:text-blue-500">
+                DALMACIJA
+              </span>
+              <span className="text-blue-500">
+                {" "}
+                {/* Blaža plava na logu isto */}
+                NAJAM
+              </span>
             </Link>
           </div>
 
@@ -47,27 +57,28 @@ export default function Navbar() {
           <div className="hidden md:flex space-x-8 font-medium text-gray-600 items-center">
             <a
               href="#"
-              className="hover:text-blue-600 transition"
+              className="hover:text-blue-500 transition"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             >
               Početna
             </a>
-            <a href="#o-nama" className="hover:text-blue-600 transition">
+            <a href="#o-nama" className="hover:text-blue-500 transition">
               O nama
             </a>
-            <a href="#ponuda" className="hover:text-blue-600 transition">
+            <a href="#ponuda" className="hover:text-blue-500 transition">
               Ponuda
             </a>
-            <a href="#galerija" className="hover:text-blue-600 transition">
+            <a href="#galerija" className="hover:text-blue-500 transition">
               Galerija
             </a>
-            <a href="#kontakt" className="hover:text-blue-600 transition">
+            <a href="#kontakt" className="hover:text-blue-500 transition">
               Kontakt
             </a>
 
+            {/* GUMB - NOVA BLAŽA PLAVA (blue-500) */}
             <button
               onClick={openModal}
-              className="bg-blue-600 text-white px-5 py-2 rounded-full font-bold hover:bg-blue-700 transition flex items-center gap-2 shadow-md ml-4"
+              className="bg-blue-500 text-white px-5 py-2 rounded-full font-bold hover:bg-blue-600 transition flex items-center gap-2 shadow-md ml-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -82,7 +93,7 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* MOBILNI HAMBURGER GUMB */}
+          {/* MOBILNI HAMBURGER */}
           <button
             className="md:hidden text-gray-800 p-2 focus:outline-none"
             onClick={() => setIsOpen(!isOpen)}
@@ -132,42 +143,43 @@ export default function Navbar() {
           <a
             href="#"
             onClick={handleLogoClick}
-            className="text-2xl font-medium text-gray-800 hover:text-blue-600"
+            className="text-2xl font-medium text-gray-800 hover:text-blue-500"
           >
             Početna
           </a>
           <a
             href="#o-nama"
             onClick={closeMenu}
-            className="text-2xl font-medium text-gray-800 hover:text-blue-600"
+            className="text-2xl font-medium text-gray-800 hover:text-blue-500"
           >
             O nama
           </a>
           <a
             href="#ponuda"
             onClick={closeMenu}
-            className="text-2xl font-medium text-gray-800 hover:text-blue-600"
+            className="text-2xl font-medium text-gray-800 hover:text-blue-500"
           >
             Ponuda
           </a>
           <a
             href="#galerija"
             onClick={closeMenu}
-            className="text-2xl font-medium text-gray-800 hover:text-blue-600"
+            className="text-2xl font-medium text-gray-800 hover:text-blue-500"
           >
             Galerija
           </a>
           <a
             href="#kontakt"
             onClick={closeMenu}
-            className="text-2xl font-medium text-gray-800 hover:text-blue-600"
+            className="text-2xl font-medium text-gray-800 hover:text-blue-500"
           >
             Kontakt
           </a>
 
+          {/* GUMB - NOVA BLAŽA PLAVA */}
           <button
             onClick={handleMobileQuote}
-            className="bg-blue-600 text-white px-8 py-3 rounded-full font-bold text-lg shadow-lg flex items-center gap-2 mt-8"
+            className="bg-blue-500 text-white px-8 py-3 rounded-full font-bold text-lg shadow-lg flex items-center gap-2 mt-8"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
