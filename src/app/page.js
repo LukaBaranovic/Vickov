@@ -2,6 +2,7 @@ import Hero from "../components/Hero";
 import ServicesCarousel from "../components/ServicesCarousel";
 import GallerySection from "../components/GallerySection";
 import Features from "../components/Features";
+import CTASection from "../components/CTASection";
 
 export default function Home() {
   return (
@@ -10,7 +11,8 @@ export default function Home() {
       <Hero />
 
       {/* 2. O NAMA SEKCIJA */}
-      <section className="py-20 bg-white" id="o-nama">
+      {/* Dodana donja crta (border-b) */}
+      <section className="py-20 bg-white border-b border-gray-100" id="o-nama">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-8">
             Vaš partner za savršen event u Dalmaciji
@@ -39,27 +41,28 @@ export default function Home() {
       </section>
 
       {/* 3. PONUDA (Vrtuljak usluga) */}
-      <section className="py-12 bg-gray-50" id="ponuda">
+      {/* Sada je BIJELA (bg-white) i ima CRTU (border-b) */}
+      <section className="py-20 bg-white border-b border-gray-100" id="ponuda">
         <div className="text-center mb-16">
-          {/* PROMJENA: Sada je font isti kao kod 'Naš proces rada' (Velika slova, razmaknuto) */}
           <p className="text-yellow-600 font-bold tracking-widest uppercase text-sm mb-3 font-serif">
             Što nudimo?
           </p>
           <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900">
             Usluga najma
           </h2>
-
-          {/* PROMJENA: Nova, blaža plava boja (blue-500) */}
           <div className="w-24 h-1 bg-blue-500 mx-auto mt-4 rounded"></div>
         </div>
         <ServicesCarousel />
       </section>
 
-      {/* 4. ZNAČAJKE */}
+      {/* 4. ZNAČAJKE (Features) */}
       <Features />
 
       {/* 5. GALERIJA */}
       <GallerySection />
+
+      {/* 6. ZADNJI POZIV NA AKCIJU */}
+      <CTASection />
     </>
   );
 }

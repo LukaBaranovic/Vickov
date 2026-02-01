@@ -6,7 +6,8 @@ export default function Hero() {
   const { openModal } = useModal();
 
   return (
-    <section className="relative h-[90vh] flex items-center justify-center text-center text-white overflow-hidden">
+    // PROMJENA: h-[90vh] -> h-screen (Zauzima 100% visine ekrana)
+    <section className="relative h-screen flex items-center justify-center text-center text-white overflow-hidden">
       {/* 1. POZADINSKA SLIKA */}
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
@@ -34,7 +35,7 @@ export default function Hero() {
           pagode, šatore i prateću opremu.
         </p>
 
-        {/* GLAVNI GUMB - NOVA BOJA (blue-500) */}
+        {/* GLAVNI GUMB (blaža plava blue-500) */}
         <button
           onClick={openModal}
           className="inline-flex items-center gap-3 bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-xl text-lg border border-blue-400/30 backdrop-blur-sm"

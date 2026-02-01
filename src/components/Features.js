@@ -68,35 +68,28 @@ export default function Features() {
   ];
 
   return (
-    <section className="py-24 bg-white border-t border-gray-100">
+    // Bijela pozadina i crta dolje
+    <section className="py-24 bg-white border-b border-gray-100">
       <div className="container mx-auto px-6 max-w-6xl">
-        {/* Naslov sekcije */}
         <div className="text-center mb-16">
-          {/* PROMJENA: Ovdje smo stavili text-yellow-600 umjesto plave, da paše sa 'Što nudimo' */}
           <p className="text-yellow-600 font-bold tracking-widest uppercase text-sm mb-3 font-serif">
             Naš proces rada
           </p>
-
           <h2 className="text-3xl md:text-4xl font-serif font-bold text-gray-900">
-            Zašto odabrati <span className="text-blue-600 italic">nas?</span>
+            Zašto odabrati <span className="text-blue-500 italic">nas?</span>
           </h2>
-          {/* Dodana plava crta i ovdje radi konzistentnosti */}
-          <div className="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded"></div>
+          <div className="w-24 h-1 bg-blue-500 mx-auto mt-4 rounded"></div>
         </div>
 
-        {/* Grid s 3 stupca */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
           {features.map((feature, index) => (
             <div key={index} className="flex flex-col items-center group">
-              {/* Ikona u krugu - ostaje plava jer je to 'brand' boja */}
-              <div className="w-20 h-20 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-sm">
+              <div className="w-20 h-20 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center mb-6 transform group-hover:scale-110 transition-transform duration-300 shadow-sm">
                 {feature.icon}
               </div>
-
               <h3 className="text-xl font-bold text-gray-800 mb-4 font-serif">
                 {feature.title}
               </h3>
-
               <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                 {feature.description}
               </p>
