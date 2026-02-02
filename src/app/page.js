@@ -7,11 +7,8 @@ import CTASection from "../components/CTASection";
 export default function Home() {
   return (
     <>
-      {/* 1. HERO SEKCIJA */}
       <Hero />
 
-      {/* 2. O NAMA SEKCIJA */}
-      {/* Dodana donja crta (border-b) */}
       <section className="py-20 bg-white border-b border-gray-100" id="o-nama">
         <div className="container mx-auto px-6 max-w-4xl text-center">
           <h2 className="text-3xl font-bold text-gray-800 mb-8">
@@ -20,9 +17,10 @@ export default function Home() {
 
           <div className="text-lg text-gray-600 leading-relaxed space-y-6">
             <p>
-              Specijalizirani smo za najam vrhunskih pagoda, šatora i prateće
-              opreme na području Splita i šire okolice. Bilo da organizirate
-              romantično vjenčanje na otvorenom, privatnu proslavu, krštenje ili
+              {/* PROMJENA: "vrhunskih pagoda i prateće opreme" (bez šatora) */}
+              Specijalizirani smo za najam vrhunskih pagoda i prateće opreme na
+              području Splita i šire okolice. Bilo da organizirate romantično
+              vjenčanje na otvorenom, privatnu proslavu, krštenje ili
               korporativni event, naša misija je osigurati da vaš prostor
               izgleda besprijekorno.
             </p>
@@ -30,7 +28,7 @@ export default function Home() {
             <p>
               Više od samog krova nad glavom, nudimo{" "}
               <strong>potpuno opremanje prostora</strong>. Naša ponuda uključuje
-              sve vrste stolova s elegantnim navlakama, pivske setove za
+              pravokutne banket stolove s elegantnim navlakama, pivske setove za
               opuštena druženja, čvrste podnice i tapisone za stabilnost, te
               ambijentalnu rasvjetu za čarobnu atmosferu. Također brinemo o
               ugodnosti vaših gostiju uz naše grijalice i rashladne uređaje, bez
@@ -40,8 +38,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. PONUDA (Vrtuljak usluga) */}
-      {/* Sada je BIJELA (bg-white) i ima CRTU (border-b) */}
       <section className="py-20 bg-white border-b border-gray-100" id="ponuda">
         <div className="text-center mb-16">
           <p className="text-yellow-600 font-bold tracking-widest uppercase text-sm mb-3 font-serif">
@@ -55,13 +51,10 @@ export default function Home() {
         <ServicesCarousel />
       </section>
 
-      {/* 4. ZNAČAJKE (Features) */}
       <Features />
 
-      {/* 5. GALERIJA */}
       <GallerySection />
 
-      {/* 6. ZADNJI POZIV NA AKCIJU */}
       <CTASection />
     </>
   );

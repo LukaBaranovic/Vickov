@@ -1,10 +1,9 @@
-"use client"; // Dodajemo ovo da možemo koristiti onClick
+"use client";
 
-import Link from "next/link"; // Importiramo Link
+import Link from "next/link";
 import { contactConfig } from "../data/config";
 
 export default function Footer() {
-  // Funkcija za skrolanje na vrh
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -12,9 +11,8 @@ export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 py-12 mt-auto" id="kontakt">
       <div className="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-        {/* Kolona 1: O nama kratko */}
+        {/* Kolona 1 */}
         <div>
-          {/* LOGO SADA VODI NA VRH */}
           <div className="mb-4">
             <Link
               href="/"
@@ -25,9 +23,14 @@ export default function Footer() {
             </Link>
           </div>
 
-          <p className="text-sm leading-relaxed">
-            Vaš pouzdan partner za najam opreme za sve vrste svečanosti na
-            području Splita i cijele Dalmacije.
+          <p className="text-sm leading-relaxed mb-4">
+            Vaš pouzdan partner za najam pagoda i opreme za sve vrste svečanosti
+            na području Splita i cijele Dalmacije.
+          </p>
+
+          {/* Dodan naziv firme */}
+          <p className="text-sm font-semibold text-white">
+            {contactConfig.companyName}
           </p>
         </div>
 
@@ -53,7 +56,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        {/* Kolona 3: Kontakt info */}
+        {/* Kolona 3: Kontakt info - POVLAČI NOVE PODATKE IZ CONFIGA */}
         <div>
           <h3 className="text-xl font-bold text-white mb-4">Kontakt</h3>
           <ul className="space-y-2 text-sm">
@@ -63,7 +66,7 @@ export default function Footer() {
                 href={`tel:+${contactConfig.phone}`}
                 className="hover:text-blue-400"
               >
-                +{contactConfig.phone}
+                {contactConfig.displayPhone}
               </a>
             </li>
             <li className="flex items-center justify-center md:justify-start">
@@ -80,7 +83,6 @@ export default function Footer() {
               Hrvatska
             </li>
 
-            {/* FACEBOOK LINK */}
             <li className="mt-6">
               <a
                 href={contactConfig.facebook}
@@ -106,7 +108,7 @@ export default function Footer() {
       </div>
 
       <div className="text-center text-sm text-gray-500 mt-12 pt-8 border-t border-gray-800">
-        <p>&copy; 2025 DalmacijaNajam. Sva prava pridržana.</p>
+        <p>&copy; 2026 {contactConfig.companyName}. Sva prava pridržana.</p>
       </div>
     </footer>
   );

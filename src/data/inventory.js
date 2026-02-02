@@ -15,18 +15,16 @@ export const inventory = [
   },
   {
     id: 3,
-    name: "Banket stolovi s navlakama",
+    name: "Pravokutni banket stolovi",
     description:
-      "Okrugli ili pravokutni stolovi idealni za svečane večere i vjenčanja. Uz stolove osiguravamo i odgovarajuće svečane navlake koje prostoru daju dozu profinjenosti.",
-    // Pazi: na slici je ekstenzija .jpeg (ne .jpg)
-    image: "/images/services/banket-stolovi-navlake.jpeg",
+      "Čvrsti pravokutni stolovi idealni za svečane večere i vjenčanja. Uz stolove osiguravamo i odgovarajuće svečane navlake koje prostoru daju dozu profinjenosti i urednosti.",
+    image: "/images/services/banket-stolovi-navlake.jpg",
   },
   {
     id: 4,
     name: "Pivski setovi",
     description:
       "Klasično i najpraktičnije rješenje za veća okupljanja i fešte. Čvrsti drveni stolovi s dvije klupe omogućuju smještaj većeg broja ljudi uz maksimalnu stabilnost.",
-    // Ovu datoteku obavezno preimenuj dodavanjem .jpg na kraju!
     image: "/images/services/pivski-set.jpg",
   },
   {
@@ -38,24 +36,24 @@ export const inventory = [
   },
   {
     id: 6,
-    name: "Grijalice (Plinske gljive)",
+    name: "Električne grijalice",
     description:
-      "Za hladnije večeri i zimska događanja, naše plinske grijalice osiguravaju ugodnu toplinu vašim gostima. Elegantnog izgleda, savršeno se uklapaju u svaki prostor.",
+      "Za hladnije večeri i zimska događanja, naše električne grijalice osiguravaju ugodnu toplinu vašim gostima. Sigurne za korištenje i elegantnog izgleda.",
     image: "/images/services/grijalica.jpg",
   },
   {
     id: 7,
     name: "Rashladni uređaji (Klime)",
     description:
-      "Ne dopustite da vrućina pokvari vaš događaj. Nudimo snažne prijenosne klima uređaje koji osiguravaju svježinu unutar pagoda i šatora tijekom ljetnih mjeseci.",
-    image: "/images/services/rashladni-uređaji.jpg",
+      "Ne dopustite da vrućina pokvari vaš događaj. Nudimo snažne prijenosne klima uređaje koji osiguravaju svježinu unutar pagoda tijekom ljetnih mjeseci.",
+    // PROMJENA: Nova slika (jpeg)
+    image: "/images/services/klima.jpeg",
   },
   {
     id: 8,
     name: "Podnice",
     description:
       "Drvene podnice su ključne za ravnu i suhu podlogu. Idealne za postavljanje ispod pagoda na travi ili neravnom terenu, osiguravajući stabilnost.",
-    // Pazi: na slici je ekstenzija .jpeg
     image: "/images/services/podnice.jpeg",
   },
   {
@@ -63,7 +61,13 @@ export const inventory = [
     name: "Tapisoni",
     description:
       "Za potpuni dojam luksuza, nudimo postavljanje tapisona (tepiha) preko podnica. Dostupni u raznim bojama, uključujući crveni tepih za VIP ulaze.",
-    // Pazi: na slici je ekstenzija .jpeg
     image: "/images/services/tapisoni.jpeg",
+  },
+  {
+    id: 10, // NOVO: Suncobrani
+    name: "Veliki suncobrani",
+    description:
+      "Zaštitite svoje goste od jakog sunca uz naše elegantne velike suncobrane. Osim što pružaju ugodnu hladovinu, estetski se savršeno uklapaju u svaki eksterijer, stvarajući opuštenu atmosferu.",
+    image: "/images/services/suncobran.jpg",
   },
 ];

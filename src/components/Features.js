@@ -25,6 +25,7 @@ export default function Features() {
     },
     {
       title: "Stručna montaža",
+      // PROMJENA: "pagoda" umjesto "šatora"
       description:
         "Sigurnost vaših gostiju nam je prioritet. Naš iskusni tim obavlja brzu i profesionalnu montažu i demontažu, pazeći na statiku i učvršćivanje pagoda, bez obzira radi li se o travnatoj površini, betonu ili pijesku.",
       icon: (
@@ -45,9 +46,10 @@ export default function Features() {
       ),
     },
     {
-      title: "Besprijekorna oprema",
+      // PROMJENA: Novi naslov i tekst da ne bude isto kao konkurencija
+      title: "Urednost i kvaliteta",
       description:
-        "Estetika je ključ svakog eventa. Naša oprema prolazi detaljno čišćenje i provjeru nakon svakog najma. Garantiramo vam snježno bijele pagode, uredne navlake i opremu koja izgleda kao nova.",
+        "Vaš događaj zaslužuje izgledati reprezentativno. Posebnu pažnju posvećujemo održavanju opreme – naše pagode i inventar stižu na lokaciju čisti, očuvani i spremni za korištenje.",
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -68,7 +70,6 @@ export default function Features() {
   ];
 
   return (
-    // Bijela pozadina i crta dolje
     <section className="py-24 bg-white border-b border-gray-100">
       <div className="container mx-auto px-6 max-w-6xl">
         <div className="text-center mb-16">

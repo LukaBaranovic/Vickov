@@ -1,12 +1,15 @@
 export const contactConfig = {
-  // Tvoj broj (provjeri je li točan)
-  phone: "385911234567",
+  // Ažuriran broj (bez razmaka za href link)
+  phone: "38598286267",
+  // Prikazni broj (kako piše na ekranu)
+  displayPhone: "098 286 267",
 
-  email: "info@dalmacijanajam.hr",
+  email: "skolavickov@gmail.com",
 
   whatsappMessage:
-    "Pozdrav, vidio sam vašu web stranicu i zanima me najam opreme. Možete li mi dati više informacija?",
+    "Pozdrav, vidio sam vašu web stranicu i zanima me najam pagoda i opreme.",
 
-  // OVDJE DODAJEMO TVOJ NOVI FACEBOOK LINK:
   facebook: "https://www.facebook.com/profile.php?id=100063457806608",
+
+  companyName: "Vickov d.o.o.",
 };
