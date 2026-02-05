@@ -2,7 +2,7 @@ export const contactConfig = {
   // Ažuriran broj (bez razmaka za href link)
   phone: "38598286267",
   // Prikazni broj (kako piše na ekranu)
-  displayPhone: "098 286 267",
+  displayPhone: "+38598286267",
 
   email: "skolavickov@gmail.com",
 
