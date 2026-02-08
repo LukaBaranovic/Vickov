@@ -11,14 +11,14 @@ export const inventory = [
     name: "Barski stolovi s navlakama",
     description:
       "Visoki barski stolovi (Ø80cm) nezaobilazan su dio svakog prijema. Uz njih dolaze visokokvalitetne elastične navlake koje običan stol pretvaraju u elegantan element uređenja.",
-    image: "/images/services/barski-stol-navlaka.jpg",
+    image: "/images/services/visoki-stol.jpg",
   },
   {
     id: 3,
     name: "Pravokutni banket stolovi",
     description:
       "Čvrsti pravokutni stolovi idealni za svečane večere i vjenčanja. Uz stolove osiguravamo i odgovarajuće svečane navlake koje prostoru daju dozu profinjenosti i urednosti.",
-    image: "/images/services/banket-stolovi-navlake.jpg",
+    image: "/images/services/banket-stol.jpg",
   },
   {
     id: 4,
@@ -39,7 +39,7 @@ export const inventory = [
     name: "Električne grijalice",
     description:
       "Za hladnije večeri i zimska događanja, naše električne grijalice osiguravaju ugodnu toplinu vašim gostima. Sigurne za korištenje i elegantnog izgleda.",
-    image: "/images/services/grijalica.jpg",
+    image: "/images/services/grijalica-elektricna.jpg",
   },
   {
     id: 7,
