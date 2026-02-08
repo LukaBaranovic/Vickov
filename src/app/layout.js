@@ -6,10 +6,13 @@ import { ModalProvider } from "../context/ModalContext";
 import "./globals.css";
 
 export const metadata = {
-  title: "Dalmacija Najam | Pagode, Šatori i Oprema za Vjenčanja",
+  title: "Najam Pagoda Split | Oprema za Vjenčanja i Evente Dalmacija",
+
   description:
-    "Iznajmljivanje vrhunskih pagoda, šatora, stolova i prateće opreme za vjenčanja i evente u Splitu, Zadru, Šibeniku i Dubrovniku. Profesionalna montaža i logistika.",
-  // OVDJE SMO MAKNULI DIO "icons" JER GA NEXT.JS SADA SAM UČITAVA IZ APP MAPE
+    "Tražite najam pagoda u Splitu ili Zadru? Vickov d.o.o. nudi vrhunske pagode, banket stolove, stolice i kompletnu opremu za vjenčanja i proslave. Zatražite ponudu!",
+
+  keywords:
+    "najam pagoda, najam šatora split, oprema za vjenčanja, iznajmljivanje stolova, vickov d.o.o.",
 };
 
 export default function RootLayout({ children }) {

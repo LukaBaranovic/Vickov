@@ -11,34 +11,35 @@ export default function Hero() {
       <div
         className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat bg-scroll md:bg-fixed"
         style={{
-          // Tvoja nova slika s 3 pagode
           backgroundImage: "url('/images/hero/pozadinaVickov5.jpg')",
         }}
       ></div>
 
-      {/* 2. CRNI FILTER (Overlay) - POJAČAN */}
-      {/* Promijenili smo bg-black/50 u bg-black/70 */}
-      {/* Ovo smanjuje vidljivost slike (opacity dojam) i ističe tekst */}
+      {/* 2. CRNI FILTER (Overlay) */}
       <div className="absolute inset-0 bg-black/70 z-10"></div>
 
       {/* 3. TEKST I GUMBI */}
-      <div className="relative z-20 px-4 max-w-4xl mx-auto animate-fade-in-up">
-        <p className="text-white font-bold tracking-widest uppercase mb-4 text-sm md:text-base">
-          Split • Zadar • Šibenik • Dubrovnik
+      <div className="relative z-20 px-4 max-w-5xl mx-auto animate-fade-in-up">
+        {/* SEO LOKACIJE - Gornja traka */}
+        {/* Dodali smo Trogir, Makarsku i Otoke da odmah budu vidljivi */}
+        <p className="text-white font-bold tracking-widest uppercase mb-4 text-xs md:text-base leading-relaxed">
+          Split • Zadar • Šibenik • Dubrovnik • Trogir • Makarska • Otoci
         </p>
 
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 font-serif leading-tight">
-          Najam opreme za <br />
-          {/* PROMJENA: Vraćeno u plavu (blue-500) koja se koristi na stranici */}
-          <span className="text-blue-500 italic">savršene trenutke</span>
+        {/* GLAVNI NASLOV */}
+        <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif leading-tight">
+          Najam Pagoda, Visokih Stolova i Opreme <br />
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-100 mb-10 font-light max-w-2xl mx-auto">
-          {/* Ažuriran tekst (samo pagode) */}
-          Pretvorite svoju proslavu u nezaboravan događaj uz naše vrhunske
-          pagode i prateću opremu.
+        {/* OPIS - SEO BOGAT LOKACIJAMA */}
+        {/* Ovdje smo prirodno ubacili Kaštela, Solin, Omiš, Brač, Hvar... */}
+        <p className="text-xl md:text-2xl text-gray-100 mb-10 font-light max-w-3xl mx-auto">
+          Pretvorite svoju proslavu u nezaboravan događaj. Vrhunske pagode,
+          barski stolovi i kompletan inventar za vjenčanja u Splitu, Zadru,
+          Trogiru, Makarskoj, Omišu, Kaštelima te na otocima (Brač, Hvar, Vis).
         </p>
 
+        {/* GUMB ZA AKCIJU */}
         <button
           onClick={openModal}
           className="inline-flex items-center gap-3 bg-blue-500 hover:bg-blue-600 text-white font-bold py-4 px-10 rounded-full transition-all transform hover:scale-105 shadow-xl text-lg border border-blue-400/30 backdrop-blur-sm"

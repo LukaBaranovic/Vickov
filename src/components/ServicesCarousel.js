@@ -50,7 +50,6 @@ export default function ServicesCarousel() {
   );
 
   return (
-    // PROMJENA 1: max-w-5xl (bilo je 7xl) - ovo sužava cijeli blok
     <div className="relative max-w-5xl mx-auto px-4">
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex -ml-4">
@@ -60,23 +59,22 @@ export default function ServicesCarousel() {
               className="flex-[0_0_100%] md:flex-[0_0_50%] lg:flex-[0_0_33.33%] pl-4 min-w-0"
             >
               <div className="h-full bg-white p-2 flex flex-col items-center text-center select-none group cursor-grab active:cursor-grabbing">
-                {/* Slika - smanjio sam marginu ispod (mb-4 umjesto mb-6) */}
                 <div className="p-1 border border-gray-100 bg-white shadow-sm mb-4 w-full">
                   <div className="aspect-[4/3] overflow-hidden relative">
                     <img
                       src={item.image}
-                      alt={item.name}
+                      // PROMJENA: Koristimo SEO optimizirani ALT tekst
+                      // Ako slučajno fali alt, koristimo name kao rezervu
+                      alt={item.alt || item.name}
                       className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
                     />
                   </div>
                 </div>
 
-                {/* Naslov - smanjen na text-xl (bilo text-2xl) */}
                 <h3 className="text-xl font-serif text-gray-900 mb-2 font-medium">
                   {item.name}
                 </h3>
 
-                {/* Opis - smanjen prored (leading-normal) da tekst bude gušći */}
                 <p className="text-gray-500 text-sm leading-normal font-light px-1">
                   {item.description}
                 </p>
@@ -86,7 +84,6 @@ export default function ServicesCarousel() {
         </div>
       </div>
 
-      {/* Navigacija */}
       <div className="flex justify-center gap-2 mt-6">
         {scrollSnaps.map((_, index) => (
           <button
@@ -94,7 +91,7 @@ export default function ServicesCarousel() {
             onClick={() => scrollTo(index)}
             className={`transition-all duration-300 rounded-full border border-gray-400 ${
               index === selectedIndex
-                ? "w-6 h-2 bg-gray-800 border-gray-800" // Malo manje točkice
+                ? "w-6 h-2 bg-gray-800 border-gray-800"
                 : "w-2 h-2 bg-transparent hover:bg-gray-200"
             }`}
           />
