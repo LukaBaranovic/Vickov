@@ -19,16 +19,16 @@ export const galleryPhotos = [
       "Uz našu ambijentalnu rasvjetu, pagode postaju magično mjesto za večernje proslave.",
   },
   {
-    src: "/images/gallery/pagoda-vjencanje-3-1.jpg", // NOVO
-    alt: "Glamurozno vjenčanje na otvorenom",
+    src: "/images/gallery/pagoda-vjencanje-2-2.jpg", // NOVO
+    alt: "Elegantni detalji",
     description:
-      "Vaš najvažniji dan zaslužuje najbolju opremu. Čiste, bijele i elegantne pagode za savršene fotografije.",
+      "Bijela boja pagoda savršeno se slaže sa svim vrstama cvjetnih dekoracija i stilova uređenja.",
   },
   {
-    src: "/images/gallery/pagoda-vjencanje-3-2.jpg", // NOVO
-    alt: "Detalji svadbenog šatora",
+    src: "/images/gallery/pagoda-vjencanje-2-3.jpg", // NOVO
+    alt: "Romantični ambijent",
     description:
-      "Pažnja posvećena svakom detalju montaže kako bi dekoracije došle do izražaja.",
+      "Stvorite nezaboravne uspomene pod sigurnim krovom naših vrhunskih pagoda.",
   },
   {
     src: "/images/gallery/pagoda-vjencanje-2-4.jpg",
@@ -36,16 +36,28 @@ export const galleryPhotos = [
     description:
       "Sigurna zaštita od sunca ili kiše bez narušavanja pogleda na prekrasnu prirodu.",
   },
+  {
+    src: "/images/gallery/pagoda-vjencanje-3-1.jpg",
+    alt: "Glamurozno vjenčanje na otvorenom",
+    description:
+      "Vaš najvažniji dan zaslužuje najbolju opremu. Čiste, bijele i elegantne pagode za savršene fotografije.",
+  },
+  {
+    src: "/images/gallery/pagoda-vjencanje-3-2.jpg",
+    alt: "Detalji svadbene pagode",
+    description:
+      "Pažnja posvećena svakom detalju montaže kako bi dekoracije došle do izražaja.",
+  },
 
   // --- EKSKLUZIVNE LOKACIJE (BAZENI I POSEBNI TERENI) ---
   {
-    src: "/images/gallery/pagoda-bazen-1-1.jpg", // NOVO
+    src: "/images/gallery/pagoda-bazen-1-1.jpg",
     alt: "Pagoda uz bazen",
     description:
       "Savršeno rješenje za ljetne zabave uz bazen – pruža ugodnu hladovinu i VIP atmosferu.",
   },
   {
-    src: "/images/gallery/pagoda-dubrovnik-1-1.jpg", // NOVO
+    src: "/images/gallery/pagoda-dubrovnik-1-1.jpg",
     alt: "Event u Dubrovniku",
     description:
       "Dostupni smo diljem Dalmacije, uključujući i ekskluzivne lokacije na jugu poput Dubrovnika.",
@@ -53,19 +65,13 @@ export const galleryPhotos = [
 
   // --- LUKE I JAVNE POVRŠINE (URBANI EVENTI) ---
   {
-    src: "/images/gallery/pagoda-brodska-luka-1-1.jpg", // NOVO
+    src: "/images/gallery/pagoda-brodska-luka-1-1.jpg",
     alt: "Pagode u brodskoj luci",
     description:
       "Naše pagode su izuzetno stabilne i sigurne, idealne za vjetrovite lokacije uz more i luke.",
   },
   {
-    src: "/images/gallery/pagoda-brodska-luka-1-2.jpg", // NOVO
-    alt: "Manifestacija na rivi",
-    description:
-      "Profesionalna oprema za gradske manifestacije, ribarske večeri i događanja na otvorenom.",
-  },
-  {
-    src: "/images/gallery/pagoda-trajektna-luka-1-1.jpg", // NOVO
+    src: "/images/gallery/pagoda-trajektna-luka-1-1.jpg",
     alt: "Event u trajektnoj luci",
     description:
       "Fleksibilna montaža na betonskim i asfaltnim površinama u prometnim zonama.",
@@ -99,7 +105,13 @@ export const galleryPhotos = [
       "Naše pagode se savršeno uklapaju u prirodni ambijent parkova i zelenih površina.",
   },
   {
-    src: "/images/gallery/pagoda-park-2-1.jpg", // NOVO
+    src: "/images/gallery/pagoda-park-1-2.jpg", // NOVO
+    alt: "Događanja u zelenilu",
+    description:
+      "Bez obzira na neravan teren, naše podnice osiguravaju stabilnu i ravnu površinu.",
+  },
+  {
+    src: "/images/gallery/pagoda-park-2-1.jpg",
     alt: "Večernji event u prirodi",
     description:
       "Organizirajte nezaboravne domjenke u prirodi uz sigurnu montažu na travnatim površinama.",
@@ -119,14 +131,26 @@ export const galleryPhotos = [
       "Brza montaža i demontaža ključna je za jednodnevne sportske manifestacije.",
   },
   {
+    src: "/images/gallery/pagoda-maraton-2-1.jpeg", // NOVO (pazi na .jpeg)
+    alt: "Zona za natjecatelje",
+    description:
+      "Osigurajte suh i zaštićen prostor za presvlačenje i pripremu sportaša.",
+  },
+  {
+    src: "/images/gallery/pagoda-maraton-2-2.jpeg", // NOVO (pazi na .jpeg)
+    alt: "Masovna okupljanja",
+    description:
+      "Naši kapaciteti omogućuju pokrivanje velikih površina za potrebe masovnih startova.",
+  },
+  {
+    src: "/images/gallery/pagoda-maraton-2-3.jpeg", // NOVO (pazi na .jpeg)
+    alt: "Tehnička podrška",
+    description:
+      "Siguran prostor za osjetljivu opremu, mjerenje vremena i organizacijski tim.",
+  },
+  {
     src: "/images/gallery/pagoda-maraton-3.jpg",
     alt: "Info pult šator",
     description: "Uočljiv i praktičan prostor za organizatore i volontere.",
-  },
-  {
-    src: "/images/gallery/pagoda-maraton-4.jpg",
-    alt: "Zaštita opreme na maratonu",
-    description:
-      "Sigurno skladištenje opreme i medalja zaštićeno od vremenskih uvjeta.",
   },
 ];
