@@ -1,5 +1,8 @@
+// 1. DODAJ OVO OBAVEZNO NA VRH:
+export const dynamic = "force-static";
+
 export default function sitemap() {
-  const baseUrl = "https://luka-baranovic.from.hr"; // Tvoja nova domena
+  const baseUrl = "https://luka-baranovic.from.hr";
 
   return [
     {
