@@ -62,6 +62,13 @@ export default function GallerySection() {
           slides={galleryPhotos}
           plugins={[Captions]}
           captions={{ showToggle: true, descriptionTextAlign: "center" }}
+          // OVDJE POVEĆAVAMO GUMBOVE
+          styles={{
+            root: {
+              "--yarl__icon_size": "48px", // Povećava ikone (standard je oko 32px)
+              "--yarl__button_padding": "16px", // Daje malo više prostora za klik
+            },
+          }}
         />
       </div>
     </section>
