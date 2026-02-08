@@ -59,7 +59,7 @@ export default function ServicesCarousel() {
 
   // --- TIPKOVNICA (Lijevo/Desno/Esc) ---
   useEffect(() => {
-    if (!isModalOpen) return; // Radi samo kad je otvoren prozor
+    if (!isModalOpen) return;
 
     const handleKeyDown = (e) => {
       if (e.key === "ArrowLeft") scrollPrev();
@@ -126,11 +126,8 @@ export default function ServicesCarousel() {
                         alt={item.alt || item.name}
                         className="w-full h-full object-cover transform group-hover:scale-105 transition duration-700"
                       />
-                      <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <span className="bg-white/90 text-gray-900 text-xs font-bold px-3 py-1 rounded-full shadow-sm">
-                          Povećaj
-                        </span>
-                      </div>
+
+                      {/* OVDJE SAM IZBRISAO DIO KODA KOJI JE PRIKAZIVAO TEKST "POVEĆAJ" */}
                     </div>
                   </div>
 
@@ -246,10 +243,14 @@ export default function ServicesCarousel() {
                   key={item.id}
                   className="flex-[0_0_100%] min-w-0 px-4 flex justify-center items-center"
                 >
-                  {/* --- DIZAJN KARTICE (VELIKI) --- */}
-                  <div className="bg-white p-6 md:p-8 rounded-xl w-full max-w-xl mx-auto flex flex-col items-center text-center relative shadow-2xl">
-                    {/* Okvir oko slike */}
-                    <div className="p-2 border border-gray-100 bg-white shadow-sm mb-6 w-full rounded">
+                  {/* --- DIZAJN KARTICE (VELIKI) - FIKSIRANA VISINA --- */}
+                  <div
+                    // OVDJE JE PROMJENA: Dodan 'h-[500px] md:h-[600px]' da fiksira veličinu
+                    // Dodan 'justify-center' da centrira sadržaj vertikalno
+                    className="bg-white p-6 md:p-8 rounded-xl w-full max-w-xl mx-auto flex flex-col items-center text-center relative shadow-2xl h-[500px] md:h-[600px] justify-center"
+                  >
+                    {/* Okvir oko slike - flex-shrink-0 sprečava da se slika spljošti */}
+                    <div className="p-2 border border-gray-100 bg-white shadow-sm mb-6 w-full rounded flex-shrink-0">
                       <div className="aspect-[4/3] overflow-hidden relative">
                         <img
                           src={item.image}
@@ -259,16 +260,19 @@ export default function ServicesCarousel() {
                       </div>
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-serif text-gray-900 mb-4 font-medium">
+                    <h3 className="text-2xl md:text-3xl font-serif text-gray-900 mb-4 font-medium flex-shrink-0">
                       {item.name}
                     </h3>
 
                     {/* PLAVA CRTA (Velika kartica) */}
-                    <div className="w-16 h-1 bg-blue-500 mx-auto mb-4 rounded"></div>
+                    <div className="w-16 h-1 bg-blue-500 mx-auto mb-4 rounded flex-shrink-0"></div>
 
-                    <p className="text-gray-600 text-base md:text-lg leading-relaxed font-light">
-                      {item.description}
-                    </p>
+                    {/* Opis - overflow-y-auto omogućuje skrolanje teksta ako je predug, bez mijenjanja veličine kartice */}
+                    <div className="overflow-y-auto px-2 custom-scrollbar">
+                      <p className="text-gray-600 text-base md:text-lg leading-relaxed font-light">
+                        {item.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
               ))}
