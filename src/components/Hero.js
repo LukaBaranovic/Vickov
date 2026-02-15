@@ -33,9 +33,8 @@ export default function Hero() {
         {/* OPIS - "Visoki stolovi" i "catering inventar" */}
         <p className="text-xl md:text-2xl text-gray-100 mb-10 font-light max-w-3xl mx-auto">
           Pretvorite svoju proslavu u nezaboravan događaj. Vrhunske pagode,
-          šatori, visoki stolovi i kompletan catering inventar za vjenčanja u
-          Splitu, Zadru, Šibeniku, Trogiru, Makarskoj, Omišu, Kaštelima te na
-          otocima (Brač, Hvar, Vis).
+          šatori, visoki stolovi za vjenčanja u Splitu, Zadru, Šibeniku,
+          Trogiru, Makarskoj, Omišu, Kaštelima te na otocima (Brač, Hvar, Vis).
         </p>
 
         {/* GUMB ZA AKCIJU */}
