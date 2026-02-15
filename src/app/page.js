@@ -1,3 +1,5 @@
+"use client";
+
 import Hero from "../components/Hero";
 import ServicesCarousel from "../components/ServicesCarousel";
 import GallerySection from "../components/GallerySection";
@@ -7,20 +9,18 @@ import CTASection from "../components/CTASection";
 export default function Home() {
   return (
     <>
-      {/* 1. HERO SEKCIJA (Slike i glavni naslov) */}
+      {/* 1. HERO SEKCIJA */}
       <Hero />
 
-      {/* 2. O NAMA SEKCIJA - SEO OPTIMIZIRANO */}
+      {/* 2. O NAMA SEKCIJA */}
       <section className="py-20 bg-white border-b border-gray-100" id="o-nama">
         <div className="container mx-auto px-6 max-w-4xl text-center">
-          {/* SEO NASLOV: Sadrži ključne riječi 'najam pagoda', 'event oprema', 'Dalmacija' */}
           <h2 className="text-3xl font-bold text-gray-800 mb-8">
             Specijalizirani najam pagoda i event opreme u Dalmaciji
           </h2>
 
           <div className="text-lg text-gray-600 leading-relaxed space-y-6">
             <p>
-              {/* SEO TEKST: Dodani gradovi (Trogir, Makarska, Otoci...) */}
               Tražite pouzdanog partnera za organizaciju događaja?
               Specijalizirani smo za
               <strong> najam vrhunskih pagoda i prateće opreme</strong> na
@@ -31,7 +31,6 @@ export default function Home() {
             </p>
 
             <p>
-              {/* SEO TEKST: Nabrojani konkretni proizvodi (stolovi, stolice, podnice...) */}
               Više od samog krova nad glavom, nudimo{" "}
               <strong>potpuno opremanje prostora</strong>. Naš inventar
               uključuje <strong>pravokutne banket stolove</strong> i
@@ -45,28 +44,27 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. PONUDA (Vrtuljak usluga) - SEO NASLOVI */}
+      {/* 3. PONUDA */}
       <section className="py-20 bg-white border-b border-gray-100" id="ponuda">
         <div className="text-center mb-16">
           <p className="text-yellow-600 font-bold tracking-widest uppercase text-sm mb-3 font-serif">
             Kompletan asortiman
           </p>
-          {/* SEO NASLOV: 'Opreme i Inventara' je bolje nego samo 'Usluga' */}
           <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900">
-            Ponuda Opreme i Inventara
+            Ponuda opreme i inventara
           </h2>
           <div className="w-24 h-1 bg-blue-500 mx-auto mt-4 rounded"></div>
         </div>
         <ServicesCarousel />
       </section>
 
-      {/* 4. ZNAČAJKE (Zašto mi?) */}
+      {/* 4. ZNAČAJKE */}
       <Features />
 
       {/* 5. GALERIJA SLIKA */}
       <GallerySection />
 
-      {/* 6. ZADNJI POZIV NA AKCIJU (Kontakt) */}
+      {/* 6. KONTAKT / CTA */}
       <CTASection />
     </>
   );

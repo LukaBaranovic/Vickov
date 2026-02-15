@@ -21,22 +21,21 @@ export default function Hero() {
       {/* 3. TEKST I GUMBI */}
       <div className="relative z-20 px-4 max-w-5xl mx-auto animate-fade-in-up">
         {/* SEO LOKACIJE - Gornja traka */}
-        {/* Dodali smo Trogir, Makarsku i Otoke da odmah budu vidljivi */}
         <p className="text-white font-bold tracking-widest uppercase mb-4 text-xs md:text-base leading-relaxed">
           Split • Zadar • Šibenik • Dubrovnik • Trogir • Makarska • Otoci
         </p>
 
-        {/* GLAVNI NASLOV */}
+        {/* GLAVNI NASLOV - Dodano "catering opreme" jer se to puno traži */}
         <h1 className="text-4xl md:text-6xl font-bold mb-6 font-serif leading-tight">
-          Najam Pagoda, Visokih Stolova i Opreme <br />
+          Najam pagoda, šatora i catering opreme
         </h1>
 
-        {/* OPIS - SEO BOGAT LOKACIJAMA */}
-        {/* Ovdje smo prirodno ubacili Kaštela, Solin, Omiš, Brač, Hvar... */}
+        {/* OPIS - "Visoki stolovi" i "catering inventar" */}
         <p className="text-xl md:text-2xl text-gray-100 mb-10 font-light max-w-3xl mx-auto">
           Pretvorite svoju proslavu u nezaboravan događaj. Vrhunske pagode,
-          barski stolovi i kompletan inventar za vjenčanja u Splitu, Zadru,
-          Trogiru, Makarskoj, Omišu, Kaštelima te na otocima (Brač, Hvar, Vis).
+          šatori, visoki stolovi i kompletan catering inventar za vjenčanja u
+          Splitu, Zadru, Šibeniku, Trogiru, Makarskoj, Omišu, Kaštelima te na
+          otocima (Brač, Hvar, Vis).
         </p>
 
         {/* GUMB ZA AKCIJU */}

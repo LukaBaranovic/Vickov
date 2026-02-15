@@ -75,7 +75,7 @@ export const inventory = [
     id: 9,
     name: "Tapisoni",
     description:
-      "Za potpuni dojam luksuza, nudimo postavljanje tapisona (tepiha) preko podnica. Dostupni u raznim bojama, uključujući crveni tepih za VIP ulaze.",
+      "Za potpuni dojam luksuza, nudimo postavljanje tapisona (tepiha) preko podnica.",
     image: "/images/services/tapisoni.jpeg",
     // SEO ALT:
     alt: "Sivi tapison tepih postavljen na podnice u šatoru",
