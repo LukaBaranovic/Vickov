@@ -1,30 +1,31 @@
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
-import ScrollToTop from "../components/ScrollToTop";
-import ContactModal from "../components/ContactModal";
-import { ModalProvider } from "../context/ModalContext";
 import "./globals.css";
+import { Inter, Playfair_Display } from "next/font/google";
+import { ModalProvider } from "../context/ModalContext";
+import Modal from "../components/Modal";
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+});
 
 export const metadata = {
-  title: "Najam Pagoda Split | Oprema za Vjenčanja i Evente Dalmacija",
+  // PROMJENA: Ključne riječi malim slovima + Tvoj brend na kraju
+  title: "Najam pagoda, šatora i catering opreme | Dalmacija Najam",
 
   description:
-    "Tražite najam pagoda u Splitu ili Zadru? Vickov d.o.o. nudi vrhunske pagode, banket stolove, stolice i kompletnu opremu za vjenčanja i proslave. Zatražite ponudu!",
-
-  keywords:
-    "najam pagoda, najam šatora split, oprema za vjenčanja, iznajmljivanje stolova, vickov d.o.o.",
+    "Vrhunski najam pagoda, šatora, visokih stolova i kompletne catering opreme za vjenčanja i evente. Dostava i montaža u Splitu, Zadru, Šibeniku i na otocima.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="hr" className="scroll-smooth">
-      <body className="bg-gray-50 flex flex-col min-h-screen">
+      <body
+        className={`${inter.variable} ${playfair.variable} font-sans antialiased`}
+      >
         <ModalProvider>
-          <ScrollToTop />
-          <Navbar />
-          <ContactModal />
-          <main className="flex-grow">{children}</main>
-          <Footer />
+          {children}
+          <Modal />
         </ModalProvider>
       </body>
     </html>
